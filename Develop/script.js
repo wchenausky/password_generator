@@ -99,12 +99,12 @@ function getPasswordCriteria() {
     return;
   }
   //conditional to check if password is at least 8 characters. prompt ends if false.
-  if (length < 8) {
+  if (length <= 8) {
     alert("Your password has to be at least 8 characters.");
     return;
   }
   //conditional to check if passwrod is less than 128 characters. prompt ends if false
-  if (length > 129) {
+  if (length >= 128) {
     alert("Your password must be less than 128 characters.");
     return;
   }
@@ -123,16 +123,16 @@ wantUpperCaseLetters=== false &&
 wantNumberValues === false &&
 wantSpecialCharacters === false 
 ) {
-  alert("you have to select at least one character type");
+  alert("You have to select at least one character type");
   return;
 }
 
-var passwordCriteria ={
+var passwordCriteria = {
   length: length,
-  wantLowerCaseLetters: wantLowerCaseLetters,
-  wantUpperCaseLetters: wantUpperCaseLetters,
-  wantNumberValues: wantNumberValues,
-  wantSpecialCharacters: wantSpecialCharacters,
+  lowerCaseLetters: wantLowerCaseLetters,
+  upperCaseLetters: wantUpperCaseLetters,
+  numberValues: wantNumberValues,
+  specialCharacters: wantSpecialCharacters,
 };
 
 return passwordCriteria;
@@ -179,5 +179,5 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword());
 }
