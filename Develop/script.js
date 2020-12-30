@@ -166,13 +166,6 @@ if (options.upperCaseLetters) {
   }
 }
 
-var password = [];
-
-for (let i = 0; i < options.length; ++i) {
-  var randomPicker = Math.floor(Math.random() * Math.floor(passwordEntry.length));
-   password.push(passwordEntry[randomPicker])
-}
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -187,4 +180,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
+}
