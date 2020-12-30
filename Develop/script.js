@@ -91,8 +91,9 @@ var specialCharacters = [
 ];
 
 function getPasswordCriteria() {
+  console.log("got here")
   var length = parseInt(prompt("How long would you like your password to be?"));
-
+  
   //conditional statement to validate if input is a number or not. prompt ends if false.
   if (isNaN(length) === true) {
     alert("You need to pick a number please.");
@@ -109,13 +110,13 @@ function getPasswordCriteria() {
     return;
   }
 // Variable to store boolean if user wants to lower case letters
-  var wantLowerCaseLetters = confrim("Click OK if you want lower case letters");
+  var wantLowerCaseLetters = confirm("Click OK if you want lower case letters");
   // Variable to store boolean if user wants upper case letters
-  var wantUpperCaseLetters = confrim("Click OK if you want upper case letters");
+  var wantUpperCaseLetters = confirm("Click OK if you want upper case letters");
   // Variable to store boolean if user wants numbers
-  var wantNumberValues = confrim("Click OK if you want numbers");
+  var wantNumberValues = confirm("Click OK if you want numbers");
   //Variable to store boolean if user wants special characters
-  var wantSpecialCharacters = confrim("Click OK if you want special characters");
+  var wantSpecialCharacters = confirm("Click OK if you want special characters");
 
   if (
 wantLowerCaseLetters === false &&
@@ -129,43 +130,44 @@ wantSpecialCharacters === false
 
 var passwordCriteria = {
   length: length,
-  lowerCaseLetters: wantLowerCaseLetters,
-  upperCaseLetters: wantUpperCaseLetters,
-  numberValues: wantNumberValues,
-  specialCharacters: wantSpecialCharacters,
+  WantLowerCaseLetters: wantLowerCaseLetters,
+  wantUpperCaseLetters: wantUpperCaseLetters,
+  wantNumberValues: wantNumberValues,
+  wantSpecialCharacters: wantSpecialCharacters,
 };
 
 return passwordCriteria;
 }
 
-function createPassword() {
+function generatePassword() {
+  console.log("got here")
   var options = getPasswordCriteria();
   console.log(options)
 
   var passwordEntry = [];
 console.log(passwordEntry)
 
-if (options.lowerCaseLetters) {
-  for (i =0 ; i < wantLowerCaseLetters.length; ++i) {
-    passwordEntry.push(wantLowerCaseLetters[i]);
+if (options.wantLowerCaseLetters) {
+  for (i = 0 ; i < lowerCaseLetters.length; i++) {
+    passwordEntry.push(lowerCaseLetters[i]);
   }
 }
-if (options.specialCharacters) {
-  for (i = 0; i < wantSpecialCharacters.length; ++i) {
-      passwordEntry.push(wantSpecialCharacters[i]);
+if (options.wantSpecialCharacters) {
+  for (i = 0; i < specialCharacters.length; i++) {
+      passwordEntry.push(specialCharacters[i]);
   }
 } 
-if (options.numberValues) {
-  for (i = 0; i < wantNumberValues.length; ++i) {
-  passwordEntry.push(wantNumberValues[i]);
+if (options.wantNumberValues) {
+  for (i = 0; i < numberValues.length; i++) {
+  passwordEntry.push(numberValues[i]);
   }
 }
-if (options.upperCaseLetters) {
-  for (i = 0; i < wantUpperCaseLetters.length; ++i) {
-  passwordEntry.push(wantUpperCaseLetters[i]);
+if (options.wantUpperCaseLetters) {
+  for (i = 0; i < upperCaseLetters.length; i++) {
+  passwordEntry.push(upperCaseLetters[i]);
   }
 }
-
+}
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -179,5 +181,6 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword());
-}
+generateBtn.addEventListener("click", writePassword);
+
+console.log("got here")
