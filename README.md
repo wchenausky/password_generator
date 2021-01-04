@@ -33,6 +33,6 @@ This is a password generator I made using JavaScript. This has easily been one o
 
 ## License
 
-(https://img.shields.io/github/license/wchenausky/password_generator)
+![GitHub](https://img.shields.io/github/license/wchenausky/password_generator)
 
 
