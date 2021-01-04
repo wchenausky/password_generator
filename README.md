@@ -20,6 +20,9 @@ This is a password generator I made using JavaScript. This has easily been one o
 3. Users will be prompted with a various alerts to confirm if they would like lower case letters, upper case letters, special characters, and/or numbers.
 4. Once the user has made those selections a unique password with their cirteria will be genertated.
 
+(https://wchenausky.github.io/password_generator/.)  
+
+
 ## Credit
 
 * Marisa NeSmith 
