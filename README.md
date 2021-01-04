@@ -2,6 +2,11 @@
 
 This is a password generator I made using JavaScript. This has easily been one of the more difficult things I have done so far, but overall it was a great learning experience. Using a mixture of arrays, variables, loops, and true/false statements I was able to create something to be proud of. 
 
+## Table of Contents
+* [Include JavaScript Link in the HTML](Include-JavaScript-Link-in-the-HTML)
+* [Create the Functional Password Generator](Create-the-Functional-Password-Generator)
+* [Credit](Credit)
+* [License](License)
 
 ## Include JavaScript Link in the HTML
 
@@ -17,6 +22,14 @@ This is a password generator I made using JavaScript. This has easily been one o
 
 ## Credit
 
+* Marisa NeSmith 
+(https://github.com/marisanesmith)
+
+* Ethan
+(https://github.com/edutcher)
+
 ## License
 
-Marisa NeSmith 
+(https://img.shields.io/github/license/wchenausky/password_generator)
+
+
