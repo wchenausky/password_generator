@@ -100,12 +100,12 @@ function getPasswordCriteria() {
     return;
   }
   //conditional to check if password is at least 8 characters. prompt ends if false.
-  if (length <= 8) {
+  if (length < 8) {
     alert("Your password has to be at least 8 characters.");
     return;
   }
   //conditional to check if passwrod is less than 128 characters. prompt ends if false
-  if (length >= 128) {
+  if (length > 128) {
     alert("Your password must be less than 128 characters.");
     return;
   }
@@ -128,15 +128,15 @@ wantSpecialCharacters === false
   return;
 }
 
-var passwordCriteria = {
+var options = {
   length: length,
-  WantLowerCaseLetters: wantLowerCaseLetters,
+  wantLowerCaseLetters: wantLowerCaseLetters,
   wantUpperCaseLetters: wantUpperCaseLetters,
   wantNumberValues: wantNumberValues,
   wantSpecialCharacters: wantSpecialCharacters,
 };
 
-return passwordCriteria;
+return options;
 }
 
 function generatePassword() {
@@ -167,7 +167,21 @@ if (options.wantUpperCaseLetters) {
   passwordEntry.push(upperCaseLetters[i]);
   }
 }
+console.log(passwordEntry)
+var finalPassword = ""
+for (i = 0; i < options.length; i++) {
+  var randInd = Math.floor(Math.random() * passwordEntry.length);
+console.log(randInd)
+ finalPassword = finalPassword + passwordEntry[randInd] 
 }
+
+console.log(finalPassword)
+return finalPassword;
+}
+
+
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
