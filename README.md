@@ -18,9 +18,13 @@ This is a password generator I made using JavaScript. This has easily been one o
 1. Use JavaScript to create a working password generator
 2. The password will start to generate once the Generate Password button is clicked.
 3. Users will be prompted with a various alerts to confirm if they would like lower case letters, upper case letters, special characters, and/or numbers.
-4. Once the user has made those selections a unique password with their cirteria will be genertated.
+4. Once the user has made those selections a unique password with their cirteria will be genertated.  
+
+![Password Generator](develop/images/password-generator.png)
 
 (https://wchenausky.github.io/password_generator/.)  
+
+(https://github.com/wchenausky/password_generator)
 
 
 ## Credit
@@ -28,7 +32,7 @@ This is a password generator I made using JavaScript. This has easily been one o
 * Marisa NeSmith 
 (https://github.com/marisanesmith)
 
-* Ethan
+* Ethan Dutcher
 (https://github.com/edutcher)
 
 ## License
